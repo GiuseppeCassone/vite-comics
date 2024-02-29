@@ -1,31 +1,44 @@
 <script>
     export default {
         icons: 'AppMerchandise',
+
+        data() {
+
+            return {
+                item: [ 
+                    {
+                        image: './img/buy-comics-digital-comics.png',
+                        link: 'DIGITAL COMICS',
+                    },
+                    {
+                        image: './img/buy-comics-merchandise.png',
+                        link: 'DC MERCHANDISE',
+                    },
+                    {
+                        image: './img/buy-comics-subscriptions.png',
+                        link: 'SUBSCRIPTION',
+                    },
+                    {
+                        image: './img/buy-comics-shop-locator.png',
+                        link: 'COMIC SHOP LOCATOR',
+                    },
+                    {
+                        image: './img/buy-dc-power-visa.svg',
+                        link: 'DC POWER VISA',
+                    },
+                ]
+
+            }
+        }
     }
 </script>
 
 <template>
     <section class="merchandise">
         <div class="container">
-            <div class="icon-links">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <span>DIGITAL COMICS</span>
-            </div>
-            <div class="icon-links">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <span>DC MERCHANDISE</span>
-            </div>
-            <div class="icon-links">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <span>SUBSCRIPTION</span>
-            </div>
-            <div class="icon-links">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <span>COMIC SHOP LOCATOR</span>
-            </div>
-            <div class="icon-links">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <span>DC POWER VISA</span>
+            <div class="icon-links" v-for="currentItem in item">
+                <img :src="currentItem.image" alt="">
+                <span>{{ currentItem.link }}</span>
             </div>
         </div>
     </section>
@@ -52,8 +65,8 @@
                 gap: 10px;
 
                 img{
-                    width: 45px;
-                    height: 55px;
+                    width: 50px;
+                    height: auto;
                 }
             }
 

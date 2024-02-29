@@ -27,7 +27,7 @@
 <template>
     <header>
         <nav class="container">
-            <img src="../assets/img/dc-logo.png" alt="">
+            <img src="/img/dc-logo.png" alt="">
             <ul>
                 <li v-for="currentNavLinks in navlinks">{{ currentNavLinks }}</li>
             </ul>

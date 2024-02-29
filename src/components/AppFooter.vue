@@ -1,52 +1,53 @@
 <script>
+    import AppMerchandise from './AppMerchandise.vue';
 
     export default {
+        components: {
+            AppMerchandise,
+
+        },
+
         link: 'AppFooter',
+
+        data() {
+
+            return {
+                
+                lists: [
+                    {
+                        title: 'DC COMICS',
+                        link: ['Character', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+                    },
+                    {
+                        title: 'DC',
+                        link: ['Therms Of Use', 'Privacy policy (New)', 'Ad Chokes', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                    },
+                    {
+                        title: 'SITES',
+                        link: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+                    },
+    
+                ],
+
+                icons: ['/img/footer-facebook.png', '/img/footer-twitter.png',]
+            }
+        }
     }
 </script>
 
 <template>
+    <AppMerchandise></AppMerchandise>
     <footer>
         <div class="container">
             <div class="footer-links">
-                <div class="link-list">
-                    <h3>DC COMICS</h3>
+                <div class="link-list" v-for="currentList in lists">
+                    <h3>{{ currentList.title }}</h3>
                     <ul>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                    </ul>
-                </div>
-                <div class="link-list">
-                    <h3>DC</h3>
-                    <ul>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                    </ul>
-                </div>
-                <div class="link-list">
-                    <h3>SITE</h3>
-                    <ul>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
-                        <li>uno</li>
+                        <li v-for="currentLink in currentList.link">{{ currentLink }}</li>                       
                     </ul>
                 </div>
             </div>
-            <img src="../assets/img/dc-logo-bg.png" alt="">
+            <img src="/img/dc-logo-bg.png" alt="">
         </div>
     </footer>
     <div class="social">
@@ -56,11 +57,7 @@
             </div>
             <div class="follow">
                 <h3>FOLLOW US</h3>
-                <img src="../assets/img/footer-facebook.png" alt="">
-                <img src="../assets/img/footer-facebook.png" alt="">
-                <img src="../assets/img/footer-facebook.png" alt="">
-                <img src="../assets/img/footer-facebook.png" alt="">
-                <img src="../assets/img/footer-facebook.png" alt="">
+                <img src="/img/footer-facebook.png" alt="">
             </div>
         </div>
     </div>
@@ -72,7 +69,7 @@
         position: relative;
         width: 100%;
         height: 370px;
-        background-image: url(../assets/img/footer-bg.jpg);
+        background-image: url(./img/footer-bg.jpg);
         background-size: cover;
         overflow: hidden;
 

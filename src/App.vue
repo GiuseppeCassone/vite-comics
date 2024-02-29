@@ -1,14 +1,12 @@
 <script>
   import AppHeader from './components/AppHeader.vue';
   import AppContent from './components/AppContent.vue';
-  import AppMerchandise from './components/AppMerchandise.vue';
   import AppFooter from './components/AppFooter.vue';
 
    export default {
     components: {
       AppHeader,
       AppContent,
-      AppMerchandise,
       AppFooter,
     },
 
@@ -23,7 +21,6 @@
 <template>
   <AppHeader></AppHeader>
   <AppContent></AppContent>
-  <AppMerchandise></AppMerchandise>
   <AppFooter></AppFooter>
   
 </template>
