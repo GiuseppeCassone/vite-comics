@@ -53,7 +53,7 @@
         .container{
             display: flex;
             justify-content: space-between;
-            width: 70%;
+            width: 80%;
             margin-left: auto;
             margin-right: auto;
             gap: 20px;
