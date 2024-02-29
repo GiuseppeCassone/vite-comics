@@ -77,6 +77,7 @@
 </template>
 
 <style lang="scss">
+@use '../styles/main' as *;
 
     footer{
         position: relative;
@@ -89,7 +90,7 @@
         .container{
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            width: $primaryDimension;
             margin-left: auto;
             margin-right: auto;
             padding: 0px;
@@ -151,7 +152,7 @@
                     background-color: transparent;
                     color: white;
                     padding: 15px 10px;
-                    border: 1px solid #0282F9;
+                    border: 1px solid $primaryColor;
                 }
             }
 
@@ -161,7 +162,7 @@
                 gap: 15px;
 
                 h3{
-                    color: #0282F9;
+                    color: $primaryColor;
                 }
             }
         }

@@ -13,6 +13,7 @@
 </template>
 
 <style lang="scss">
+@use '../styles/main' as *;
 
     .content{
         width: 100%;
@@ -21,7 +22,7 @@
         .container{
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            width: $primaryDimension;
             margin-left: auto;
             margin-right: auto;
             padding: 20px 0;

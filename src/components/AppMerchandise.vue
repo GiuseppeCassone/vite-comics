@@ -45,15 +45,16 @@
 </template>
 
 <style lang="scss">
+@use '../styles/main' as *;
 
     .merchandise{
         width: 100%;
-        background-color: #0282F9;
+        background-color: $primaryColor;
 
         .container{
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            width: $primaryDimension;
             margin-left: auto;
             margin-right: auto;
             gap: 20px;
