@@ -5,7 +5,7 @@
     components: {
       AppHeader,
     },
-    
+
     data(){
       return {
         
@@ -18,6 +18,7 @@
   <AppHeader></AppHeader>
 </template>
 
-<style>
+<style lang="scss">
+@use './styles/main' as *;
 
 </style>
