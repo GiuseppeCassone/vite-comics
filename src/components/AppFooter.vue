@@ -88,7 +88,7 @@
         overflow: hidden;
 
         .container{
-            display: flex;
+            display: $primaryFlex;
             justify-content: space-between;
             width: $primaryDimension;
             margin-left: auto;
@@ -96,18 +96,17 @@
             padding: 0px;
 
             .footer-links{
-                display: flex;
-                flex-wrap: wrap;
+                display: $primaryFlex;
                 gap: 30px;
                 padding: 45px 0;
 
                 .link-list{
-                    display: flex;
+                    display: $primaryFlex;
                     flex-direction: column;
                     gap: 10px;
 
                     ul{
-                        display: flex;
+                        display: $primaryFlex;
                         flex-direction: column;
                         align-items: flex-start;
                         gap: 5px;
@@ -139,7 +138,7 @@
         background-color: #303030;
 
         .container{
-            display: flex;
+            display: $primaryFlex;
             justify-content: space-between;
             align-items: center;
             width: 70%;
@@ -157,7 +156,7 @@
             }
 
             .follow{
-                display: flex;
+                display: $primaryFlex;
                 align-items: center;
                 gap: 15px;
 

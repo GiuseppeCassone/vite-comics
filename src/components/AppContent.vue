@@ -20,7 +20,7 @@
         padding: 40px 0;
         
         .container{
-            display: flex;
+            display: $primaryFlex;
             justify-content: space-between;
             width: $primaryDimension;
             margin-left: auto;

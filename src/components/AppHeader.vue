@@ -46,7 +46,7 @@
         color: black;
 
         .container{
-            display: flex;
+            display: $primaryFlex;
             justify-content: space-between;
             width: $primaryDimension;
             margin-left: auto;
@@ -58,7 +58,7 @@
             }
         
             ul{
-                display: flex;
+                display: $primaryFlex;
                 align-items: center;
                 gap: 25px;
                 list-style-type: none;
