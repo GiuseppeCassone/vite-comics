@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <section>
+    <section class="content">
         <div class="container">
             <h1> -> Content goes here <- </h1>
         </div>
@@ -14,7 +14,7 @@
 
 <style lang="scss">
 
-    section{
+    .content{
         width: 100%;
         padding: 40px 0;
         
