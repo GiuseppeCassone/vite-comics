@@ -77,6 +77,11 @@
         overflow: hidden;
 
         .container{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
             padding: 0px;
 
             .footer-links{
@@ -94,6 +99,7 @@
                         flex-direction: column;
                         align-items: flex-start;
                         gap: 5px;
+                        list-style-type: none;
                     }
                 }
             }
@@ -112,7 +118,13 @@
         background-color: #303030;
 
         .container{
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 0;
 
             .sign-up{
                 button{

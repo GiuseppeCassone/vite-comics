@@ -2,7 +2,25 @@
 
     export default {
         name: 'AppHeader',
+
+        data() {
+            return {
+                navlinks: [
+                    'CHARACTERS',
+                    'COMICS',
+                    'MOVIES',
+                    'TV',
+                    'GAMES',
+                    'COLLECTIBLES',
+                    'VIDEOS',
+                    'FANS',
+                    'NEWS',
+                    'SHOP'
+                ],
+            }
+        }
     }
+
 
 </script>
 
@@ -11,16 +29,7 @@
         <nav class="container">
             <img src="../assets/img/dc-logo.png" alt="">
             <ul>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
+                <li v-for="currentNavLinks in navlinks">{{ currentNavLinks }}</li>
             </ul>
         </nav>
     </header>
@@ -32,23 +41,28 @@
         background-color: white;
         color: black;
 
+        .container{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 0;
+        
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                list-style-type: none;
+                
+                li{
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
         
         
     }
 
-    .container{
-        display: flex;
-        justify-content: space-between;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px 0;
-    
-        ul{
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            list-style-type: none;
-        }
-    }
 </style>

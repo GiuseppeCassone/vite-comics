@@ -7,7 +7,7 @@
 <template>
     <section class="content">
         <div class="container">
-            <h1> -> Content goes here <- </h1>
+            <h1> Content goes here </h1>
         </div>
     </section>
 </template>
@@ -19,6 +19,13 @@
         padding: 40px 0;
         
         .container{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 0;
+            
             h1{
                 font-size: 40px;
             }
