@@ -29,25 +29,26 @@
 <style lang="scss">
     header{
         width: 100%;
-        padding: 20px 0;
         background-color: white;
         color: black;
 
-        .container{
+        
+        
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 0;
+    
+        ul{
             display: flex;
-            justify-content: space-between;
-            width: 70%;
-            margin-left: auto;
-            margin-right: auto;
-
-            ul{
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                list-style-type: none;
-            }
+            align-items: center;
+            gap: 15px;
+            list-style-type: none;
         }
-
-
     }
 </style>
