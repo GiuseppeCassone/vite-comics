@@ -66,9 +66,11 @@
                 li{
                     font-size: 12px;
                     font-weight: bold;
-                    padding: 62px 0;
+                    padding-top: 62px;
+                    padding-bottom: 62px;
 
                     &.active{
+                        padding-bottom: 59px;
                         color: $primaryColor;
                         border-bottom: 4px solid $primaryColor;
                     }
