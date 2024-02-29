@@ -65,9 +65,14 @@
                 gap: 10px;
 
                 img{
-                    width: 50px;
-                    height: auto;
+                    width: auto;
+                    height: 55px;
                 }
+            }
+
+            .icon-links:last-child img{
+                width: 50px;
+                height: auto;
             }
 
         }
