@@ -13,13 +13,24 @@
 
             return {
                 
-                comics: ['Character', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News'],
-
-                dc: ['Therms Of Use', 'Privacy policy (New)', 'Ad Chokes', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us'],
-
-                sites: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa'],
-
-                shop: ['Shop DC', 'Shop DC Collectibles'],
+                linkList: [
+                    {
+                        title: 'DC COMICS',
+                        links:['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+                    },
+                    {
+                        title: 'SHOP',
+                        links:['Shop DC', 'Shop DC Collectibles']
+                    },
+                    {
+                        title: 'DC',
+                        links:['Terms of Use', 'Privacy Policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshop', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                    },
+                    {
+                        title: 'SITES',
+                        links:['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+                    },
+            ],
             
 
                 icons: ['/img/footer-facebook.png', '/img/footer-twitter.png', '/img/footer-youtube.png', '/img/footer-pinterest.png', '/img/footer-periscope.png']
@@ -33,20 +44,20 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <div class="link-list">
-                    <h3>DC COMICS</h3>
+                <div v-for="currentList in linkList" class="link-list">
+                    <h3>{{ currentList.title }}</h3>
                     <ul>
-                        <li v-for="currentLink in comics">{{ currentLink }}</li>                       
+                        <li v-for="currentLink in currentList.links">{{ currentLink }}</li>                       
                     </ul>
-                    <div class="shop">
+                    <!-- <div class="shop">
                         <h3>SHOP</h3>
                         <ul>
                             <li v-for="currentLink in shop">{{ currentLink }}</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 
-                <div class="link-list">
+                <!-- <div class="link-list">
                     <h3>DC</h3>
                     <ul>
                         <li v-for="currentLink in dc">{{ currentLink }}</li>                       
@@ -58,7 +69,7 @@
                     <ul>
                         <li v-for="currentLink in sites">{{ currentLink }}</li>                       
                     </ul>
-                </div>               
+                </div>                -->
             </div>
             <img src="/img/dc-logo-bg.png" alt="">
         </div>
@@ -93,12 +104,17 @@
             width: $primaryDimension;
             margin-left: auto;
             margin-right: auto;
+            height: 100%;
             padding: 0px;
 
             .footer-links{
                 display: $primaryFlex;
+                flex-direction: column;
+                flex-wrap: wrap;
                 gap: 30px;
-                padding: 45px 0;
+
+                height: 100%;
+                padding: 25px 0;
 
                 .link-list{
                     display: $primaryFlex;
@@ -141,7 +157,7 @@
             display: $primaryFlex;
             justify-content: space-between;
             align-items: center;
-            width: 70%;
+            width: $primaryDimension;
             margin-left: auto;
             margin-right: auto;
             padding: 20px 0;
