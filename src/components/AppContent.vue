@@ -6,6 +6,7 @@
 
 <template>
     <section class="content">
+        <img src="../../public/img/jumbotron.jpg" alt="jumbotron">
         <div class="container">
             <h1> Content goes here </h1>
         </div>
@@ -17,7 +18,13 @@
 
     .content{
         width: 100%;
-        padding: 40px 0;
+
+        img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+        }
         
         .container{
             display: $primaryFlex;

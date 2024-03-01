@@ -49,27 +49,7 @@
                     <ul>
                         <li v-for="currentLink in currentList.links">{{ currentLink }}</li>                       
                     </ul>
-                    <!-- <div class="shop">
-                        <h3>SHOP</h3>
-                        <ul>
-                            <li v-for="currentLink in shop">{{ currentLink }}</li>
-                        </ul>
-                    </div> -->
                 </div>
-                
-                <!-- <div class="link-list">
-                    <h3>DC</h3>
-                    <ul>
-                        <li v-for="currentLink in dc">{{ currentLink }}</li>                       
-                    </ul>
-                </div>
-                
-                <div class="link-list">
-                    <h3>SITES</h3>
-                    <ul>
-                        <li v-for="currentLink in sites">{{ currentLink }}</li>                       
-                    </ul>
-                </div>                -->
             </div>
             <img src="/img/dc-logo-bg.png" alt="">
         </div>
