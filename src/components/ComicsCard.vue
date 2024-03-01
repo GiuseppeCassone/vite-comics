@@ -13,7 +13,7 @@
 
 <template>
      <div class="card">
-        <img :src="comicImg" :alt="comicTitle">
+        <img crossorigin="anonymous" :src="comicImg" :alt="comicTitle">
         <h4>{{ comicTitle }}</h4>
     </div>
 </template>
