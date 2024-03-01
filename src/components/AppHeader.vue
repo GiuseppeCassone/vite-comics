@@ -59,20 +59,33 @@
         
             ul{
                 display: $primaryFlex;
-                align-items: center;
+                align-items: stretch;
                 gap: 25px;
                 list-style-type: none;
                 
                 li{
+                    position: relative;
+                    align-items: center;
+                    display: $primaryFlex;
                     font-size: 12px;
                     font-weight: bold;
-                    padding-top: 62px;
-                    padding-bottom: 62px;
 
-                    &.active{
-                        padding-bottom: 59px;
+                    
+                }
+
+                li.active{
+                    color: $primaryColor;
+
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 0;
+
+                        width: 100%;
+                        height: 4px;
                         color: $primaryColor;
-                        border-bottom: 4px solid $primaryColor;
+                        background-color: $primaryColor;
                     }
                 }
 
