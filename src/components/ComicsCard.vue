@@ -22,6 +22,7 @@
 
         .card{
             width: calc(100% / 6 - 25px / 6 * 5);
+            margin-bottom: 15px;
 
                 img{
                     width: 180px;

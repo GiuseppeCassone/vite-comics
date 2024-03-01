@@ -92,7 +92,7 @@
 
 <template>
     <section class="content">
-        <img id="jumbo" src="../../public/img/jumbotron.jpg" alt="jumbotron">
+        <img id="jumbo" src="../../public/img/jumbotron.jpg" alt="jumbotron" crossorigin="anonymous">
         <div class="container">
             <div class="current-series"><h2>CURRENT SERIES</h2></div>
 
