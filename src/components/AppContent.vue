@@ -1,6 +1,12 @@
 <script>
+    import ComicsCard from './ComicsCard.vue';
+
     export default {
         title: 'AppContent',
+
+        components: {
+            ComicsCard
+        },
 
         data() {
             return {
@@ -86,15 +92,12 @@
 
 <template>
     <section class="content">
-        <img src="../../public/img/jumbotron.jpg" alt="jumbotron">
+        <img id="jumbo" src="../../public/img/jumbotron.jpg" alt="jumbotron">
         <div class="container">
             <div class="current-series"><h2>CURRENT SERIES</h2></div>
 
             <div class="comics-container">
-                <div v-for="currentComic in comics" class="card">
-                    <img :src="currentComic.thumb" alt="">
-                    <h4>{{ currentComic.series }}</h4>
-                </div>
+               <ComicsCard v-for="currentComic in comics" :comicImg="currentComic.thumb" :comicTitle="currentComic.series"></ComicsCard>
             </div>
 
             <div class="load">LOAD MORE</div>
@@ -108,7 +111,7 @@
     .content{
         width: 100%;
 
-        img{
+        #jumbo{
             width: 100%;
             height: 400px;
             object-fit: cover;
@@ -140,21 +143,6 @@
                     flex-wrap: wrap;
                     gap: 25px;
                     margin-bottom: 45px;
-
-                        .card{
-                            width: calc(100% / 6 - 25px / 6 * 5);
-
-                                img{
-                                    width: 180px;
-                                    height: 180px;
-                                    margin-bottom: 10px;
-                                }
-
-                                h4{
-                                    text-transform: uppercase;
-                                    font-size: 12px;
-                                }
-                        }
 
                 }
 
